@@ -31,7 +31,7 @@ function Products() {
           return (
             <li className="items" key={product.id}>
               <ProductCard
-                img="https://picsum.photos/id/54/400/300"
+                img={product.img}
                 title="What I learned from my visit to The Upside Down"
                 author="Nancy Wheeler"
                 product={product}
