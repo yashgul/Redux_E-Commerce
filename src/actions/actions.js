@@ -36,3 +36,9 @@ export function DeleteCart(payload) {
     payload,
   };
 }
+export function ChooseSelectedItem(payload) {
+  return {
+    type: "CHOOSE_SELECTED_ITEM",
+    payload,
+  };
+}

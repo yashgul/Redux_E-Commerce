@@ -1,0 +1,25 @@
+.link {
+  text-decoration: none !important;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 350px;
+}
+.productcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.productbody {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productimage {
+  width: 80%;
+  height: auto;
+}

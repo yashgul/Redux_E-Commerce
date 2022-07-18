@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
 import {
   decrement,
   increment,
@@ -6,8 +7,11 @@ import {
   AddCart,
   DeleteCart,
 } from "../../actions/actions.js";
+import "./Item.css";
+function Item() {
+  const location = useLocation();
+  const { id } = location.state;
 
-function Item(props) {
   const cart = useSelector((state) => state.cartReducer);
   console.log(cart);
 
@@ -15,10 +19,7 @@ function Item(props) {
 
   return (
     <div className="flex">
-      <button onClick={() => dispatch(AddCart(props.id))}>ADD</button>
-      <span>ID: {props.id}</span>
-      <span>Quantitity:{props.quantity}</span>
-      <button onClick={() => dispatch(DeleteCart(props.id))}>REMOVE</button>
+      <span>ID:{id}</span>
     </div>
   );
 }

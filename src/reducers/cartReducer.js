@@ -3,6 +3,11 @@ const initProduct = {
     { id: 1, quantity: 1 },
     { id: 2, quantity: 10 },
     { id: 3, quantity: 0 },
+    { id: 4, quantity: 1 },
+    { id: 5, quantity: 10 },
+    { id: 6, quantity: 0 },
+    { id: 7, quantity: 10 },
+    { id: 8, quantity: 0 },
   ],
 };
 

@@ -7,7 +7,8 @@ import {
   DeleteCart,
 } from "../../actions/actions.js";
 import "./Cart.css";
-import Item from "./Item.js";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function Cart() {
   const cart = useSelector((state) => state.cartReducer);
@@ -33,6 +34,12 @@ function Cart() {
         })}
       </ul>
       <p>Total: {total}</p>
+
+      <Link to="/" className="link">
+        <Button className="link" variant="contained">
+          Products
+        </Button>
+      </Link>
     </div>
   );
 }
