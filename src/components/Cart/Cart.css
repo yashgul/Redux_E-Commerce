@@ -1,6 +1,6 @@
 .cart {
   display: flex;
-  flex-direction: column !important;
+  flex-direction: column;
   color: rebeccapurple;
   justify-content: center;
   align-content: center;

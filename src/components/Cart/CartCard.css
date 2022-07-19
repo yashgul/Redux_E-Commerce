@@ -1,10 +1,11 @@
-body {
+.cbody {
   background: hsla(210, 20%, 90%, 1);
 
   line-height: 1.6;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+
   min-height: 100%;
   align-items: center;
   font-family: "Open Sans", sans-serif;
@@ -30,24 +31,21 @@ h5 {
   color: #222;
 }
 
-.header h3 {
-  font-weight: 400;
-  color: #555;
-  width: 30em;
-}
-
-.cards {
+.ccards {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.card {
+.ccard {
+  display: flex;
+  flex-direction: row;
   background: #fff;
-  width: 24em;
+  width: 90vw;
   border-radius: 0.6em;
   margin: 1em;
+
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
@@ -55,19 +53,19 @@ h5 {
   transition: all ease 200ms;
 }
 
-.card:hover {
+.ccard:hover {
   transform: scale(1.03);
   box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12),
     0 8px 32px -8px hsla(0, 0%, 0%, 0.14),
     0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
 }
 
-.card img {
-  width: 100%;
+.ccard img {
+  width: 75%;
   object-fit: cover;
 }
 
-.card h2 {
+.ccard h2 {
   color: #222;
   margin-top: -0.2em;
   line-height: 1.4;
@@ -77,11 +75,11 @@ h5 {
   transition: all ease-in 100ms;
 }
 
-.card p {
+.ccard p {
   color: #777;
 }
 
-.card h5 {
+.ccard h5 {
   color: #bbb;
   font-weight: 700;
   font-size: 0.7em;
@@ -90,10 +88,10 @@ h5 {
   text-transform: uppercase;
 }
 
-.card-body {
+.ccard-body {
   padding: 1.2em;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   flex-direction: column;
   align-items: center;
 }

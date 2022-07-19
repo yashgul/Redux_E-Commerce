@@ -6,10 +6,11 @@ import {
   AddCart,
   DeleteCart,
 } from "../../actions/actions.js";
+import CartCard from "./CartCard.js";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-
+import Navbar from "../../Navbar/Navbar.js";
 function Cart() {
   const cart = useSelector((state) => state.cartReducer);
   console.log(cart);
@@ -20,15 +21,19 @@ function Cart() {
   const dispatch = useDispatch();
   return (
     <div className="cart">
-      <span>{cart[0].quantity}</span>
+      <Navbar />
       <ul>
-        {cart.map((product) => {
+        {cart.map((product, key) => {
           console.log(product);
           return product.quantity === 0 ? null : (
-            <li className="cart" key={product.id}>
-              <button onClick={() => dispatch(DeleteCart(product.id))}>
-                Remove from cart
-              </button>
+            <li className="items" key={product.id}>
+              <CartCard
+                img={product.img}
+                title="What I learned from my visit to The Upside Down"
+                author="Nancy Wheeler"
+                product={product}
+                pkey={key}
+              />
             </li>
           );
         })}

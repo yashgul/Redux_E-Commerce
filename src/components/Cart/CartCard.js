@@ -1,25 +1,19 @@
-import "./ProductCard.css";
+import "./CartCard.css";
 import { AddCart, DeleteCart } from "../../actions/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-function ProductCard(props) {
+function CartCard(props) {
   const cart = useSelector((state) => state.cartReducer);
   const dispatch = useDispatch();
   console.log(props);
   return (
-    <div className="card">
-      <div to="item" className="link">
+    <div className="ccard cbody">
+      <div to="citem" className="link">
         <img src={props.img} />
       </div>
-      <div className="card-body">
+      <div className="ccard-body">
         <h2>{props.title}</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
         <div>Quantity:{cart[props.pkey].quantity}</div>
         <Button
           className="buttons"
@@ -43,4 +37,4 @@ function ProductCard(props) {
   );
 }
 
-export default ProductCard;
+export default CartCard;
