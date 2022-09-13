@@ -39,12 +39,6 @@ function Cart() {
         })}
       </ul>
       <p>Total: {total}</p>
-
-      <Link to="/" className="link">
-        <Button className="link" variant="contained">
-          Products
-        </Button>
-      </Link>
     </div>
   );
 }

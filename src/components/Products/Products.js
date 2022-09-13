@@ -40,12 +40,6 @@ function Products() {
           );
         })}
       </ul>
-
-      <Link to="cart" className="link">
-        <Button className="link" variant="contained">
-          Cart ({total})
-        </Button>
-      </Link>
     </div>
   );
 }

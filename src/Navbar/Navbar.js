@@ -10,7 +10,12 @@ function Navbar() {
   cart.forEach((product) => (total += product.quantity));
   return (
     <div className="navbar">
-      <Link to="cart" className="link">
+      <Link to="/" className="link">
+        <Button className="link navitem" variant="contained">
+          Home
+        </Button>
+      </Link>
+      <Link to="/cart" className="link navitem">
         <Button className="link" variant="contained">
           Cart ({total})
         </Button>
