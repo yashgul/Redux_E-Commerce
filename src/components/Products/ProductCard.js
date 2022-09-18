@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 function ProductCard(props) {
   const cart = useSelector((state) => state.cartReducer);
   const dispatch = useDispatch();
-  console.log(props);
+  // console.log(props);
   return (
     <div className="card">
       <div to="item" className="link">
@@ -15,14 +15,13 @@ function ProductCard(props) {
       <div className="card-body">
         <h2>{props.title}</h2>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
-        <div>Quantity:{cart[props.pkey].quantity}</div>
+        <p>{props.desc}.</p>
+        <div className="quan_cost">
+          <span>Quantity :{cart.products[props.pkey].quantity}</span>
+          <span>Cost: {cart.products[props.pkey].cost}$</span>
+        </div>
         <Button
-          className="buttons"
+          className="prodbuttons"
           variant="outlined"
           color="success"
           onClick={() => dispatch(AddCart(props.product.id))}
@@ -31,7 +30,7 @@ function ProductCard(props) {
         </Button>
 
         <Button
-          className="buttons"
+          className="prodbuttons"
           variant="outlined"
           color="error"
           onClick={() => dispatch(DeleteCart(props.product.id))}

@@ -9,28 +9,29 @@ function CartCard(props) {
   console.log(props);
   return (
     <div className="ccard cbody">
-      <div to="citem" className="link">
+      <div className="clink">
         <img src={props.img} />
       </div>
+      <h2 className="ctitle">{props.title}</h2>
       <div className="ccard-body">
-        <h2>{props.title}</h2>
-        <div>Quantity:{cart[props.pkey].quantity}</div>
         <Button
-          className="buttons"
+          className="cbuttons"
           variant="outlined"
           color="success"
           onClick={() => dispatch(AddCart(props.product.id))}
         >
-          Add to Cart
+          +
         </Button>
-
+        <div className="quan_cost">
+          <span>{cart.products[props.pkey].quantity}</span>
+        </div>
         <Button
-          className="buttons"
+          className="cbuttons"
           variant="outlined"
           color="error"
           onClick={() => dispatch(DeleteCart(props.product.id))}
         >
-          Remove from Cart
+          -
         </Button>
       </div>
     </div>

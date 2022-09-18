@@ -2,15 +2,19 @@ import "./App.css";
 import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Item from "./components/Item/Item";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 function App() {
+  const [initialState, setInitialState] = useState([]);
+
+  console.log(initialState);
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/item" element={<Item />} />
         </Routes>
       </BrowserRouter>
     </div>

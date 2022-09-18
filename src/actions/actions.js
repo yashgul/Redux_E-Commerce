@@ -42,3 +42,16 @@ export function ChooseSelectedItem(payload) {
     payload,
   };
 }
+export function ChangeFilter(payload) {
+  return {
+    type: "CHANGE_FILTER",
+    payload,
+  };
+}
+
+export function GetProducts(payload) {
+  return {
+    type: "GET_PRODUCTS",
+    payload,
+  };
+}

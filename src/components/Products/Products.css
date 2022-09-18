@@ -23,3 +23,7 @@
   width: 80%;
   height: auto;
 }
+.quan_cost {
+  display: flex;
+  justify-content: space-around;
+}

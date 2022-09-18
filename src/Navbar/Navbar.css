@@ -1,11 +1,34 @@
 .navbar {
   width: 100%;
   min-height: 5vh;
-  padding: 1vw;
 
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  border-bottom: 1px solid lightgray;
 }
 
 .navitem {
-  margin: 1vw;
+  margin: 0.5vw;
+  width: 8vw !important;
+}
+.searchbar {
+  margin: 0.5vw;
+  padding: 0.5vw;
+  width: 50%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 900px) {
+  .navitem {
+    margin: 0.5vw;
+    width: 20vw !important;
+  }
+
+  .searchbar {
+    margin: 0.5vw;
+    padding: 0.5vw;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
