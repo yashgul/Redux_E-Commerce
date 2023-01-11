@@ -23,7 +23,12 @@
   width: 80%;
   height: auto;
 }
-.quan_cost {
-  display: flex;
-  justify-content: space-around;
+
+.searchbar {
+  padding: 0.5vw;
+  left: 5.5vw;
+  position: relative !important;
+  width: 50%;
+  box-sizing: border-box;
+  margin: auto;
 }

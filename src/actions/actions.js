@@ -49,9 +49,9 @@ export function ChangeFilter(payload) {
   };
 }
 
-export function GetProducts(payload) {
+export function changeSortCategory(payload) {
   return {
-    type: "GET_PRODUCTS",
+    type: "SORT",
     payload,
   };
 }

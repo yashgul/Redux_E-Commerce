@@ -3,9 +3,11 @@ import { ChangeFilter } from "../../actions/actions.js";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "./Products.css";
+import { changeSortCategory } from "../../actions/actions.js";
 import ProductCard from "./ProductCard.js";
 import Navbar from "../../Navbar/Navbar.js";
 import Select from "@mui/material/Select";
+import { MenuItem } from "@mui/material";
 import { useEffect } from "react";
 function Products() {
   useEffect(() => {});
@@ -23,6 +25,12 @@ function Products() {
     console.log(cart);
     console.log(event.target.value);
     dispatch(ChangeFilter(event.target.value));
+  }
+
+  function changeCat(event) {
+    console.log(cart);
+    console.log(event.target.value);
+    dispatch(changeSortCategory(event.target.value));
   }
 
   //console.log(cart);
